@@ -3,24 +3,26 @@ package CITY.MANAGER.controller;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.apache.commons.lang3.RandomUtils;
+
 @RestController
 public class controller {
+
     @Value("Valeurs Immobilières")
     String appName;
 
-    @RequestMapping("/")
-    public String homePage(Model model){
-        model.addAttribute("appName", appName);
+    @GetMapping("/")
+    public String homePage(Model model) {
+        model.addAttribute ("appName", appName);
         return "home";
     }
+
     @GetMapping("/random")
     public Object[][] arrayController(Model model) {
         Object[][] matrice = new Object[30][30];
-        ville(matrice);
-        model.addAttribute("matrice", matrice);
+        ville (matrice);
+        model.addAttribute ("matrice", matrice);
         return matrice;
     }
 
