@@ -29,7 +29,7 @@ public class Quartier implements Serializable {
     private Ville ville;
     public Quartier(){}
 
-    public int getId() {
+    public int getIdQuartier() {
         return id;
     }
 
@@ -83,4 +83,5 @@ public class Quartier implements Serializable {
         this.ordonnee = ordonnee;
         this.ville = ville;
     }
+
 }

@@ -1,6 +1,7 @@
 package CITY.MANAGER.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Set;
@@ -12,10 +13,26 @@ public class Ville implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "Id", nullable = false)
     private int id;
+
+
     @Column(unique = true,name = "NOM_VILLE", length = 64, nullable = false)
     private String nomVille;
+
+
     @Column(name = "VALEUR_MIN", length = 64, nullable = false)
     private int valeurMin;
+
+
+    @Column(name = "VALEUR_MAX", length = 64, nullable = false)
+    private int valeurMax;
+
+
+    @Column(name = "LARGEUR", length = 64, nullable = false)
+    private int largeur;
+
+
+    @Column(name = "HAUTEUR", length = 64, nullable = false)
+    private int hauteur;
 
     public int getValeurMin() {
         return valeurMin;
@@ -41,26 +58,22 @@ public class Ville implements Serializable {
         this.quartiers = quartiers;
     }
 
-    @Column(name = "VALEUR_MAX", length = 64, nullable = false)
-    private int valeurMax;
-
-    @Column(name = "LARGEUR", length = 64, nullable = false)
-    private int largeur;
-
-    @Column(name = "HAUTEUR", length = 64, nullable = false)
-    private int hauteur;
 
     public Ville() {
+        super();
     }
 
-    @OneToMany(mappedBy = "ville")
+    /* L'attribut[fetch=FetchType.LAZY] indique que lorsqu'on demande une entité [Quartier] au contexte de persistance et que celle-ci doit être cherchée
+    dans la base de données, alors l'entité [Ville] n'est pas ramenée avec elle. L'intérêt de ce mode est
+    que l'entité [Ville] n'est cherchée que si on le demande. On économise ainsi la mémoire et on gagne enperformances  */
+    @OneToMany(mappedBy = "ville", fetch = FetchType.LAZY)
     private Collection<Quartier> quartiers;
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int idVille) {
         this.id = id;
     }
 
@@ -88,12 +101,24 @@ public class Ville implements Serializable {
         this.hauteur = hauteur;
     }
 
-    public Ville(String nomVille, int valeurMin, int valeurMax, int largeur, int hauteur, Collection<Quartier> quartiers) {
+    public Ville(String nomVille, int valeurMin, int valeurMax, int largeur, int hauteur) {
         this.nomVille = nomVille;
         this.valeurMin = valeurMin;
         this.valeurMax = valeurMax;
         this.largeur = largeur;
         this.hauteur = hauteur;
-        this.quartiers = quartiers;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Ville{" +
+                "nomVille='" + nomVille + '\'' +
+                ", valeurMin=" + valeurMin +
+                ", valeurMax=" + valeurMax +
+                ", largeur=" + largeur +
+                ", hauteur=" + hauteur +
+                '}';
     }
 }
+

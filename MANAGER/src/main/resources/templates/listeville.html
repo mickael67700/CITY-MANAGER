@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Home</title>
+</head>
+<body>
+<h2 th:text="#{app.title}">App Title</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Hauteur</th>
+        <th>Largeur</th>
+        <th>Min</th>
+        <th>Max</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--/*@thymesVar id="villes" type=""*/-->
+    <tr th:each="ville : ${villes}">
+        <td th:text="${ville.id}">Id</td>
+        <!--/*@thymesVar id="nomVille" type="CITY"*/-->
+        <td th:text="${ville.nomVille}">Name</td>
+        <!--/*@thymesVar id="hauteur" type="CITY"*/-->
+        <td th:text="${ville.hauteur}">Hauteur</td>
+        <!--/*@thymesVar id="largeur" type="CITY"*/-->
+        <td th:text="${ville.largeur}">Largeur</td>
+        <!--/*@thymesVar id="valeurMin" type="CITY"*/-->
+        <td th:text="${ville.valeurMin}">Valeur Min</td>
+        <!--/*@thymesVar id="valeurMax" type="CITY"*/-->
+        <td th:text="${ville.valeurMax}">Valeur Max</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
