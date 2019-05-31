@@ -64,6 +64,15 @@ public class VilleController {
        return "listeville";
     }
 
+    @GetMapping("delete/{id}")
+    public String deleteVille(@PathVariable("id")int id, Model model){
+        Ville ville = villeRepository.findById (id).
+                orElseThrow (()->new IllegalArgumentException ("Id ville invalide: "+ id));
+        villeRepository.delete (ville);
+        model.addAttribute ("villes",villeRepository.findAll ());
+        return "listeville";
+    }
+
 }
      /*
     public void updateVille(@PathVariable("id")int id,
