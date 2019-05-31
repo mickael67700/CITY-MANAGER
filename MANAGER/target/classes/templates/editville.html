@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Update User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container my-5">
+    <h3> Editer Ville</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-8">
+                <form action="#" th:action="@{/villes/editville/{id}(id=${ville.id})}" th:object="${ville}" method="post">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="nomVille" class="col-form-label">Nom</label> <input type="text"  th:field="*{nomVille}" class="form-control" id="nomVille">
+                            <span th:if="${#fields.hasErrors('nomVille')}" th:errors="*{nomVille}">Erreur Nom</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="hauteur" class="col-form-label">Hauteur</label> <input type="number" th:field="*{hauteur}" class="form-control" id="hauteur" >
+                            <span th:if="${#fields.hasErrors('hauteur')}" th:errors="*{hauteur}">Erreur hauteur</span>
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="largeur" class="col-form-label">Largeur</label> <input type="number" th:field="*{largeur}" class="form-control" id="largeur" >
+                            <span th:if="${#fields.hasErrors('largeur')}" th:errors="*{largeur}">Erreur Largeur</span>
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="valeurMin" class="col-form-label">Valeur min</label> <input type="number" th:field="*{valeurMin}" class="form-control" id="valeurMin">
+                            <span th:if="${#fields.hasErrors('valeurMin')}" th:errors="*{valeurMin}">Erreur Valeur Min</span>
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="valeurMax" class="col-form-label">Valeur max</label> <input type="number" th:field="*{valeurMax}" class="form-control" id="valeurMax">
+                            <span th:if="${#fields.hasErrors('valeurMax')}" th:errors="*{valeurMax}">Erreur Valeur Max</span>
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <input type="submit" class="btn btn-primary" value="Update Ville">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
