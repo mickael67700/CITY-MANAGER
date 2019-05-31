@@ -12,22 +12,17 @@ public class Ville implements Serializable {
     @Column(name = "Id", nullable = false)
     private int id;
 
-
     @Column(unique = true,name = "NOM_VILLE", length = 64, nullable = false)
     private String nomVille;
-
 
     @Column(name = "VALEUR_MIN", length = 64, nullable = false)
     private int valeurMin;
 
-
     @Column(name = "VALEUR_MAX", length = 64, nullable = false)
     private int valeurMax;
 
-
     @Column(name = "LARGEUR", length = 64, nullable = false)
     private int largeur;
-
 
     @Column(name = "HAUTEUR", length = 64, nullable = false)
     private int hauteur;

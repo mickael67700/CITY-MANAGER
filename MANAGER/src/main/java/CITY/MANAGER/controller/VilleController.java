@@ -42,20 +42,43 @@ public class VilleController {
         model.addAttribute ("largeur",ville.getLargeur ());
         model.addAttribute ("valeurMin",ville.getValeurMin ());
         model.addAttribute ("valeurMax",ville.getValeurMax ());
-
-
         villeRepository.save (ville);
         return "listeville";
     }
 
-    @GetMapping("edit/{id}")
-    public String updateVille(@PathVariable("id") int id,@Valid Ville ville,BindingResult bindingResult, Model model){
-        if(bindingResult.hasErrors ()){
+    @GetMapping("editville/{id}")
+    public String showEditVille(@PathVariable("id") int id,Model model){
+        Ville ville = villeRepository.findById (id).
+                orElseThrow (()-> new IllegalArgumentException ("Id ville invalide: "+ id));
+        model.addAttribute ("ville", ville);
+        return "editville"; }
+
+    @PostMapping("editville/{id}")  // créer une nouvelle ville. Problème à régler.
+
+    public String updateVille(@PathVariable("id")int id,@Valid Ville ville, BindingResult result, Model model){
+        if(result.hasErrors ()){
             ville.setId (id);
             return "editville";
         }
         villeRepository.save (ville);
-        model.addAttribute("villes",villeRepository.findAll ());
-        return "index";
+       return "listeville";
     }
+
 }
+     /*
+    public void updateVille(@PathVariable("id")int id,
+                            @PathVariable("nomVille")String nomVille,
+                            @PathVariable("hauteur")int hauteur,
+                            @PathVariable("largeur")int largeur,
+                            @PathVariable("valeurMin")int valeurMin,
+                            @PathVariable("valeurMax")int valeurMax,
+                            @Valid Ville ville, BindingResult result, Model model){
+       ville.setNomVille (nomVille);
+       ville.setHauteur (hauteur);
+       ville.setLargeur (largeur);
+       ville.setValeurMin (valeurMin);
+       ville.setValeurMax (valeurMax);
+
+       villeRepository.save (ville); */
+
+
