@@ -25,26 +25,79 @@
                             <label for="hauteur" class="col-form-label">Hauteur</label> <input type="number" th:field="*{hauteur}" class="form-control" id="hauteur" >
                             <span th:if="${#fields.hasErrors('hauteur')}" th:errors="*{hauteur}">Erreur hauteur</span>
                         </div>
-
                         <div class="form-group col-md-8">
                             <label for="largeur" class="col-form-label">Largeur</label> <input type="number" th:field="*{largeur}" class="form-control" id="largeur" >
                             <span th:if="${#fields.hasErrors('largeur')}" th:errors="*{largeur}">Erreur Largeur</span>
                         </div>
-
                         <div class="form-group col-md-8">
                             <label for="valeurMin" class="col-form-label">Valeur min</label> <input type="number" th:field="*{valeurMin}" class="form-control" id="valeurMin">
                             <span th:if="${#fields.hasErrors('valeurMin')}" th:errors="*{valeurMin}">Erreur Valeur Min</span>
                         </div>
-
                         <div class="form-group col-md-8">
                             <label for="valeurMax" class="col-form-label">Valeur max</label> <input type="number" th:field="*{valeurMax}" class="form-control" id="valeurMax">
                             <span th:if="${#fields.hasErrors('valeurMax')}" th:errors="*{valeurMax}">Erreur Valeur Max</span>
                         </div>
+                        <div class="form-group col-md-8">
+                            <label for="rivDmax" class="col-form-label">Zone influence riviere max</label> <input type="number" th:field="*{rivDmax}" class="form-control" id="rivDmax">
+                            <span th:if="${#fields.hasErrors('rivDmax')}" th:errors="*{rivDmax}">Erreur Valeur RIV DMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="rivPmax" class="col-form-label">Pourcentage max influence riviere </label> <input type="number" th:field="*{rivPmax}" class="form-control" id="rivPmax">
+                            <span th:if="${#fields.hasErrors('rivPmax')}" th:errors="*{rivPmax}">Erreur Valeur RIV PMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="forDmax" class="col-form-label">Zone influence foret max</label> <input type="number" th:field="*{forDmax}" class="form-control" id="forDmax">
+                            <span th:if="${#fields.hasErrors('forDmax')}" th:errors="*{forDmax}">Erreur Valeur FORET DMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="forPmax" class="col-form-label">Pourcentage max influence foret </label> <input type="number" th:field="*{forPmax}" class="form-control" id="forPmax">
+                            <span th:if="${#fields.hasErrors('forPmax')}" th:errors="*{forPmax}">Erreur Valeur FORET PMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="eclDmax" class="col-form-label">Zone influence ecole max</label> <input type="number" th:field="*{eclDmax}" class="form-control" id="eclDmax">
+                            <span th:if="${#fields.hasErrors('eclDmax')}" th:errors="*{eclDmax}">Erreur Valeur ECL DMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="eclPmax" class="col-form-label">Pourcentage max influence ecole </label> <input type="number" th:field="*{eclPmax}" class="form-control" id="eclPmax">
+                            <span th:if="${#fields.hasErrors('eclPmax')}" th:errors="*{eclPmax}">Erreur Valeur ECL PMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="eglDmax" class="col-form-label">Zone influence eglise max</label> <input type="number" th:field="*{eglDmax}" class="form-control" id="eglDmax">
+                            <span th:if="${#fields.hasErrors('eglDmax')}" th:errors="*{eglDmax}">Erreur Valeur EGL DMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="eglPmax" class="col-form-label">Pourcentage max influence eglise </label> <input type="number" th:field="*{eglPmax}" class="form-control" id="eglPmax">
+                            <span th:if="${#fields.hasErrors('eglPmax')}" th:errors="*{eglPmax}">Erreur Valeur EGL PMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="comDmax" class="col-form-label">Zone influence commerce max</label> <input type="number" th:field="*{comDmax}" class="form-control" id="comDmax">
+                            <span th:if="${#fields.hasErrors('comDmax')}" th:errors="*{comDmax}">Erreur Valeur COM DMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="comPmax" class="col-form-label">Pourcentage max influence commerce </label> <input type="number" th:field="*{comPmax}" class="form-control" id="comPmax">
+                            <span th:if="${#fields.hasErrors('comPmax')}" th:errors="*{comPmax}">Erreur Valeur COM PMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="polDmax" class="col-form-label">Zone influence police max</label> <input type="number" th:field="*{polDmax}" class="form-control" id="polDmax">
+                            <span th:if="${#fields.hasErrors('polDmax')}" th:errors="*{polDmax}">Erreur Valeur POL DMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="polPmax" class="col-form-label">Pourcentage max influence police </label> <input type="number" th:field="*{polPmax}" class="form-control" id="polPmax">
+                            <span th:if="${#fields.hasErrors('polPmax')}" th:errors="*{polPmax}">Erreur Valeur POL PMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="rtbDmax" class="col-form-label">Zone influence arret de bus max</label> <input type="number" th:field="*{rtbDmax}" class="form-control" id="rtbDmax">
+                            <span th:if="${#fields.hasErrors('rtbDmax')}" th:errors="*{rtbDmax}">Erreur Valeur COM DMax</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="rtbPmax" class="col-form-label">Pourcentage max influence arret de bus </label> <input type="number" th:field="*{rtbPmax}" class="form-control" id="rtbPmax">
+                            <span th:if="${#fields.hasErrors('rtbPmax')}" th:errors="*{rtbPmax}">Erreur Valeur COM PMax</span>
+                        </div>
+
 
                         <div class="col-md-6">
                             <input type="submit" class="btn btn-primary" value="Add ville">
                         </div>
-
                         <div class="form-group col-md-8"></div>
 
                     </div>
