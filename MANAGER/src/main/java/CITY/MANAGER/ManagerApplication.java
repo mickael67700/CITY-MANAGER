@@ -22,7 +22,8 @@ public class ManagerApplication {
 public CommandLineRunner insertCity(VilleRepository repository){
 	return (args -> {
 		// Sauver une ville
-		repository.save (new Ville ("Martignas",1000,5000,30,30));
+		repository.save (new Ville ("Java sur mer ",1000,5000,30,30));
+		repository.save (new Ville ("Martignas ",3000,8000,10,10));
 	});
 }
 }

@@ -1,7 +1,6 @@
 package CITY.MANAGER.entity;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
 
 @Entity
 @Table(name="QUARTIER")
@@ -23,6 +22,9 @@ public class Quartier implements Serializable {
 
     @Column(name = "Y",length = 10, nullable = false)
     private int ordonnee;
+
+    @Column(name = "INFLUENCE",length =10,nullable = true)
+    private int influence;
 
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
 
@@ -67,6 +69,12 @@ public class Quartier implements Serializable {
     public void setTypeQuartier(String typeQuartier) {
         this.typeQuartier = typeQuartier;
     }
+
+    public int getId() { return id; }
+
+    public int getInfluence() {return influence; }
+
+    public void setInfluence(int influence) { this.influence = influence; }
 
     public Ville getVille() {
         return ville;

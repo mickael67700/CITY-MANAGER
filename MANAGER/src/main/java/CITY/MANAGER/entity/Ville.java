@@ -1,10 +1,8 @@
 package CITY.MANAGER.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.Set;
 
 @Entity
 @Table(name = "VILLE")
