@@ -1,7 +1,9 @@
 package CITY.MANAGER.controller;
 
+import CITY.MANAGER.entity.Quartier;
 import CITY.MANAGER.entity.Ville;
 import CITY.MANAGER.repository.VilleRepository;
+import antlr.collections.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.Entity;
 import javax.validation.Valid;
+import java.util.Collection;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/villes/")
@@ -42,6 +46,7 @@ public class VilleController {
         model.addAttribute ("largeur",ville.getLargeur ());
         model.addAttribute ("valeurMin",ville.getValeurMin ());
         model.addAttribute ("valeurMax",ville.getValeurMax ());
+
         villeRepository.save (ville);
         return "listeville";
     }

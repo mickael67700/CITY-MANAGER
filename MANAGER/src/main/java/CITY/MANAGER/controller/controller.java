@@ -10,7 +10,8 @@ import org.apache.commons.lang3.RandomUtils;
 public class controller {
 
     @Value("Valeurs Immobilières")
-    String appName;
+    String appName = new String ("Valeurs Immobilières");
+
 
     @GetMapping("/")
     public String homePage(Model model) {
