@@ -27,6 +27,7 @@ public class Quartier  implements Serializable {
     @Column(name = "Id", nullable = false)
     private int id;
     @ManyToOne
+    @JoinColumn(name="VILLE_ID")
     public Ville ville ;
 
     @Column(name = "TYPE_QUARTIER", length = 64, nullable = true)

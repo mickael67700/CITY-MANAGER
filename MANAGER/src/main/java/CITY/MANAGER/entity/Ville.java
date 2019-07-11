@@ -30,12 +30,13 @@ public class Ville implements Serializable {
     }
 
     @OneToMany
+    @JoinColumn(name="QUARTIER_ID")
     private List<Quartier> quartiers;
 
 
     @Column(unique = true, name = "NOM_VILLE", length = 64, nullable = true)
     private String nomVille;
-
+    //valeurs min et max des quartiers
     @Column(name = "VALEUR_MIN", length = 64, nullable = true)
     private int valeurMin;
     @Column(name = "VALEUR_MAX", length = 64, nullable = true)
