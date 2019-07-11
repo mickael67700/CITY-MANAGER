@@ -4,24 +4,40 @@ package CITY.MANAGER;
 
 
 import CITY.MANAGER.controller.controller;
+import CITY.MANAGER.entity.Quartier;
+import CITY.MANAGER.entity.Ville;
+import CITY.MANAGER.controller.QuartierController;
+import CITY.MANAGER.controller.VilleController;
+import org.springframework.ui.Model;
+
+import java.util.ArrayList;
 
 
 class matrice {
+
+
     public static void main(String[] args) {
 
-       /* ArrayList<Integer> tab = new ArrayList<>(100);
-        int length = 0;
+       /*ArrayList<Quartier> quartiers = new ArrayList<quartier>();
+        for(int i=0;i<largeur;i++) {
+            for (int j = 0; j < getHauteur(); j++) {
 
-        while (length < 100) {
-            int x = RandomUtils.nextInt(1, 8);
+                quartier = new Quartier();
+
+                model.addAttribute("abcisse", quartier.getAbscisse());
+                model.addAttribute("ordonnee", quartier.getOrdonnee());
+                villeRepository.save(ville);
+            }
+        }
+        return String.valueOf (villeRepository.findAll ());
+    }
 
 
-            tab.add(x);
-            length += 1;
-*/
-        Object[][] tableau = new Object[30][30];
-        controller.ville(tableau);
+
 
     }
+} */
+    }
 }
+
 

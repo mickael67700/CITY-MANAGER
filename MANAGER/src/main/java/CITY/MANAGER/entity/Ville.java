@@ -1,10 +1,18 @@
 package CITY.MANAGER.entity;
 
+import org.springframework.web.bind.annotation.RequestParam;
+import org.ujmp.core.collections.list.ArrayIndexList;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
+import CITY.MANAGER.entity.Quartier;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import CITY.MANAGER.entity.Quartier;
+import CITY.MANAGER.controller.QuartierController;
 @Entity
 @Table(name = "VILLE")
 public class Ville implements Serializable {
@@ -13,17 +21,29 @@ public class Ville implements Serializable {
     @Column(name = "Id", nullable = false)
     private int id;
 
-    @Column(unique = true, name = "NOM_VILLE", length = 64, nullable = false)
+    public List<Quartier> getQuartiers() {
+        return quartiers;
+    }
+
+    public void setQuartiers(List<Quartier> quartiers) {
+        this.quartiers = quartiers;
+    }
+
+    @OneToMany
+    private List<Quartier> quartiers;
+
+
+    @Column(unique = true, name = "NOM_VILLE", length = 64, nullable = true)
     private String nomVille;
 
-    @Column(name = "VALEUR_MIN", length = 64, nullable = false)
+    @Column(name = "VALEUR_MIN", length = 64, nullable = true)
     private int valeurMin;
-    @Column(name = "VALEUR_MAX", length = 64, nullable = false)
+    @Column(name = "VALEUR_MAX", length = 64, nullable = true)
     private int valeurMax;
 
-    @Column(name = "LARGEUR", length = 64, nullable = false)
+    @Column(name = "LARGEUR", length = 64, nullable = true)
     private int largeur;
-    @Column(name = "HAUTEUR", length = 64, nullable = false)
+    @Column(name = "HAUTEUR", length = 64, nullable = true)
     private int hauteur;
 
     //distance max d'interaction sur le prix
@@ -61,6 +81,8 @@ public class Ville implements Serializable {
     @Column(name = "RTB_DMAX", length = 5, nullable = true)
     private float rtbDmax;
     @Column(name = "RTB_PMAX", length = 5, nullable = true)
+
+
     private float rtbPmax;
 
     public int getValeurMin() {
@@ -79,13 +101,8 @@ public class Ville implements Serializable {
         this.valeurMax = valeurMax;
     }
 
-    public Collection<Quartier> getQuartiers() {
-        return quartiers;
-    }
 
-    public void setQuartiers(Collection<Quartier> quartiers) {
-        this.quartiers = quartiers;
-    }
+
 
 
     public Ville() {
@@ -95,8 +112,6 @@ public class Ville implements Serializable {
     /* L'attribut[fetch=FetchType.LAZY] indique que lorsqu'on demande une entité [Quartier] au contexte de persistance et que celle-ci doit être cherchée
     dans la base de données, alors l'entité [Ville] n'est pas ramenée avec elle. L'intérêt de ce mode est
     que l'entité [Ville] n'est cherchée que si on le demande. On économise ainsi la mémoire et on gagne enperformances  */
-    @OneToMany(mappedBy = "ville", fetch = FetchType.LAZY)
-    private Collection<Quartier> quartiers;
 
     public int getId() {
         return id;
@@ -198,18 +213,19 @@ public class Ville implements Serializable {
     }
 
 
-    public Ville(String nomVille, int valeurMin, int valeurMax, int largeur, int hauteur, Collection<Quartier> quartiers) {
+    public Ville(String nomVille, int valeurMin, int valeurMax, int largeur, int hauteur, Quartier quartier) {
         this.nomVille = nomVille;
         this.valeurMin = valeurMin;
         this.valeurMax = valeurMax;
         this.largeur = largeur;
         this.hauteur = hauteur;
-        this.quartiers = quartiers;
     }
-
-    public Ville(String nomVille, int valeurMin, int valeurMax, int largeur, int hauteur, float rivDmax, float rivPmax, float forDmax,
-                 float forPmax, float eclDmax, float eclPmax, float eglDmax, float eglPmax, float comDmax, float comPmax, float polDmax,
-                 float polPmax, float rtbDmax, float rtbPmax) {
+    public Ville(@RequestParam String nomVille, @RequestParam int valeurMin, @RequestParam int valeurMax, @RequestParam int largeur, @RequestParam int hauteur,
+                 @RequestParam float rivDmax, @RequestParam float rivPmax, @RequestParam float forDmax,
+                 @RequestParam float forPmax, @RequestParam float eclDmax, @RequestParam float eclPmax, @RequestParam float eglDmax,
+                 float eglPmax, @RequestParam float comDmax, @RequestParam float comPmax, @RequestParam float polDmax,
+                 @RequestParam float polPmax, @RequestParam float rtbDmax, @RequestParam float rtbPmax, List<Quartier>quartiers
+    ) {
         this.nomVille = nomVille;
         this.valeurMin = valeurMin;
         this.valeurMax = valeurMax;
@@ -239,7 +255,9 @@ public class Ville implements Serializable {
                 ", valeurMax=" + valeurMax +
                 ", largeur=" + largeur +
                 ", hauteur=" + hauteur +
+
                 '}';
     }
-}
 
+
+}
