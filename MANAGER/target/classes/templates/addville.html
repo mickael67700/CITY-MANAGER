@@ -16,6 +16,7 @@
         <div class="card-body">
             <div class="col-md-10">
                 <form action="#" class="ui form" th:action="@{/villes/addville}" th:object="${ville}" method="post">
+
                     <div class="row">
                         <div class="form-group col-md-8">
                             <label for="nomVille" class="col-form-label">Nom</label> <input type="text" th:field="*{nomVille}" class="form-control" id="nomVille">
@@ -95,12 +96,15 @@
                         </div>
 
 
+
+
                         <div class="col-md-6">
                             <input type="submit" class="btn btn-primary" value="Add ville">
                         </div>
                         <div class="form-group col-md-8"></div>
 
                     </div>
+                </form>
                 </form>
             </div>
         </div>

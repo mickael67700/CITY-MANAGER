@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>N</title>
+</head>
+<body>
+    <h3> </h3>
+        <form action="#arrays" class="ui form" th:action="@{/villes/generate/{id}}" th:object="${quartier}"  th:object="${ville}" method="post">
+            <table>
+                <tr>
+            <td class="col3">
+                <span th:each="Label, status: ${}"
+            </td>
+                </tr>
+            </table>
+
+</body>
+</html>
