@@ -79,8 +79,7 @@ public class VilleController {
 
             }
         }
-
-        return String.valueOf (villeRepository.findAll ());
+        return "addville";
 
     }
 
@@ -140,6 +139,7 @@ public class VilleController {
         ville.setLargeur(largeur);
         ville.setValeurMin(valeurMin);
         ville.setValeurMax(valeurMax);
+        villeRepository.save(ville);
 
     }
 

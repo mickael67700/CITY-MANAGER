@@ -20,8 +20,6 @@ public class ManagerApplication {
 	public CommandLineRunner insertCity(VilleRepository repository){
 		return (args -> {
 			// Sauver une ville
-			int id =0;
-
 
 		});
 	}
