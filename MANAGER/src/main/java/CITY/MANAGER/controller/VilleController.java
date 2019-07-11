@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.Id;
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/villes/")
@@ -121,10 +122,8 @@ public class VilleController {
 
     @GetMapping("viewville/{id}")
     public String viewVille(@PathVariable("id") int id,Model model){
-        Ville ville = villeRepository.findById (id).
-
-                orElseThrow (()-> new IllegalArgumentException ("Id ville invalide: "+ id));
-        model.addAttribute ("ville", ville);
+        List<Quartier> quartier = quartierRepository.findByVilleId(id);
+        model.addAttribute ("quartier", quartier);
         return "city"; }
 
 

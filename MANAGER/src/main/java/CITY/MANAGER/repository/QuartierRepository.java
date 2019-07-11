@@ -14,7 +14,7 @@ import java.util.Optional;
 public interface QuartierRepository extends JpaRepository<Quartier, Integer> {
     @Override
     Page<Quartier> findAll(Pageable pageable);
-    Optional<Quartier> findByVilleId(Integer integer);
+    List<Quartier> findByVilleId(Integer integer);
     Optional<Quartier> findByIdAndVilleId(Integer integer ,int villeId);
 
     Page<Quartier> findByVilleId(int villeId, Pageable pageable);

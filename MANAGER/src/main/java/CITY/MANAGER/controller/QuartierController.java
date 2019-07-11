@@ -11,6 +11,7 @@ import CITY.MANAGER.repository.VilleRepository;
 
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -22,7 +23,7 @@ public class QuartierController {
     private VilleRepository villeRepository;
 
     @GetMapping("/villes/{villeId}/quartiers")
-    public Optional<Quartier> getAllQuartiersByVilleId(@PathVariable(value = "villeId") int villeId) {
+    public List<Quartier> getAllQuartiersByVilleId(@PathVariable(value = "villeId") int villeId) {
         return quartierRepository.findByVilleId(villeId);
     }
 
