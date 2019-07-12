@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a1cc702-a4de-4479-9d5f-1f1c0646b592" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Quartier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Quartier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Ville.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Ville.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CITY/MANAGER/controller/VilleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CITY/MANAGER/controller/VilleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/city.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/city.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,10 +38,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Quartier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1340">
+            <state relative-caret-position="1660">
               <caret line="130" column="41" lean-forward="true" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Ville.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="-2205">
               <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -67,23 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/repository/QuartierRepository.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/city.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+            <state relative-caret-position="360">
+              <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/city.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editville.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="60">
+              <caret line="18" column="64" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -103,11 +102,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/controller/VilleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
+            <state relative-caret-position="460">
+              <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/listeville.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -155,16 +163,16 @@
         <option value="$PROJECT_DIR$/src/main/java/CITY/MANAGER/controller/QuartierController.java" />
         <option value="$PROJECT_DIR$/src/main/java/CITY/MANAGER/repository/QuartierRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/CITY/MANAGER/ManagerApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CITY/MANAGER/controller/VilleController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/city.html" />
         <option value="$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Quartier.java" />
         <option value="$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Ville.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CITY/MANAGER/controller/VilleController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/city.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="150" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1639" />
     <option name="width" value="1594" />
     <option name="height" value="1080" />
   </component>
@@ -330,7 +338,7 @@
       <workItem from="1562745092811" duration="28135000" />
       <workItem from="1562824916970" duration="20551000" />
       <workItem from="1562852856968" duration="84000" />
-      <workItem from="1562865359825" duration="7097000" />
+      <workItem from="1562865359825" duration="12583000" />
     </task>
     <task id="LOCAL-00001" summary="Insertion Ville et quartiers associé">
       <created>1562840974094</created>
@@ -357,10 +365,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89925000" />
+    <option name="totallyTimeSpent" value="95411000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-7" width="1922" height="1089" extended-state="7" />
+    <frame x="1599" y="-7" width="1922" height="1089" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15265958" />
@@ -373,7 +381,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26907218" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17525773" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -481,20 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editville.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="18" column="122" selection-start-line="18" selection-start-column="122" selection-end-line="18" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/listeville.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/repository/ManagerRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -586,16 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/controller/VilleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -603,16 +587,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/city.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Ville.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
+        <state relative-caret-position="-2205">
           <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -624,12 +601,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editville.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="64" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/listeville.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/entity/Quartier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1340">
+        <state relative-caret-position="1660">
           <caret line="130" column="41" lean-forward="true" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CITY/MANAGER/controller/VilleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/city.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#h6#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
