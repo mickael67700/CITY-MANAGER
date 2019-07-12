@@ -14,12 +14,10 @@
 <body>
 <table>
     <tbody>
-
-    <tr role="row" class="odd" th:each="quartier:${quariers}">
-    <td><span th:each="category : ${villes}" th:if="(${villes.id} == ${quartiers.id})" th:text="${quartier.typeQuartier}"></span></td>
-    <a th:href="@{/villes/quartiers/{id}(id=${quartier.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
-
-</tr>
+    <tr th:each="quartier : ${quartiers}" >
+        <h6 th:inline="text" style="text-align: center;" >
+             [[${quartier.typeQuartier}]]</h6>
+        </tr>
     </tbody>
     </table>
 </body>

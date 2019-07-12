@@ -2,7 +2,6 @@ package CITY.MANAGER.controller;
 
 import CITY.MANAGER.entity.Ville;
 import CITY.MANAGER.entity.Quartier;
-import CITY.MANAGER.controller.controller;
 import CITY.MANAGER.repository.VilleRepository;
 import CITY.MANAGER.repository.QuartierRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +32,12 @@ public class VilleController {
         model.addAttribute ("villes",villeRepository.findAll ());
         return "listeville";
     }
+
+    @GetMapping("viewville/{id}")
+    public String viewVille(@PathVariable("id") int id,Model model){
+        model.addAttribute  ("quartiers",quartierRepository.findByVilleId(id));
+        return "city"; }
+
 
     @GetMapping("addville")
     public String addVille(Ville ville,Quartier quartier){
@@ -118,13 +123,6 @@ public class VilleController {
         model.addAttribute ("villes",villeRepository.findAll ());
         return "listeville";
     }
-
-    @GetMapping("viewville/{id}")
-    public String viewVille(@PathVariable("id") int id,Model model){
-        List<Quartier> quartier = quartierRepository.findByVilleId(id);
-        model.addAttribute ("quartier", quartier);
-        return "city"; }
-
 
 
     public void updateVille(@PathVariable("id")int id,
