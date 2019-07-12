@@ -14,11 +14,17 @@
 <body>
 <table>
     <tbody>
-    <tr th:each="quartier : ${quartiers}" >
-        <h6 th:inline="text" style="text-align: center;" >
-             [[${quartier.typeQuartier}]]</h6>
-        </tr>
+    <tr th:each="ville : ${villes}">
+        <td th:inline="text" >[[${ville.largeur}]] </td>
+    </tr>
+
+    <ul>
+        <div>  <span th:each="quartier : ${quartiers}" th:inline="text"   >[[${quartier.typeQuartier}]]</span>
+        </div>
+    </ul>
+
+
     </tbody>
-    </table>
+</table>
 </body>
 </html>
