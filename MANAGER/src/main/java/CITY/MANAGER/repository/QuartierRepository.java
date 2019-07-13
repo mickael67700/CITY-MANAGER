@@ -16,6 +16,6 @@ public interface QuartierRepository extends JpaRepository<Quartier, Integer> {
     Page<Quartier> findAll(Pageable pageable);
     List<Quartier> findByVilleId(Integer integer);
     Optional<Quartier> findByIdAndVilleId(Integer integer ,int villeId);
-
+    public Quartier findById(int id);
     Page<Quartier> findByVilleId(int villeId, Pageable pageable);
 }

@@ -11,7 +11,6 @@ public interface VilleRepository extends CrudRepository<Ville, Integer>{
     public List<Ville>findByNomVille(String nomVille);
     public Ville findVilleById(int id);
     public Ville save(Ville ville);
-
 }
 
 

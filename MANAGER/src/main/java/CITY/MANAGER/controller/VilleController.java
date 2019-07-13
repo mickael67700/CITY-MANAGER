@@ -4,6 +4,8 @@ import CITY.MANAGER.entity.Ville;
 import CITY.MANAGER.entity.Quartier;
 import CITY.MANAGER.repository.VilleRepository;
 import CITY.MANAGER.repository.QuartierRepository;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,8 +36,10 @@ public class VilleController {
     }
 
     @GetMapping("viewville/{id}")
-    public String viewVille(@PathVariable("id") int id,Model model){
+    @JsonCreator
+    public String viewVille(@JsonProperty("typeQuartier")@PathVariable("id") int id, Model model){
         model.addAttribute  ("quartiers",quartierRepository.findByVilleId(id));
+        model.addAttribute  ("ville",villeRepository.findVilleById(id));
         return "city"; }
 
 
@@ -148,6 +152,26 @@ public class VilleController {
                 orElseThrow (()-> new IllegalArgumentException ("Id ville invalide: "+ id));
         model.addAttribute ("ville", ville);
         return "generate"; }
+
+    @GetMapping("editquartier/{id}")
+    public String showEditQuartier(@PathVariable("id") int id,Model model){
+        Quartier quartier = quartierRepository.findById (id);
+        model.addAttribute ("quartier", quartier);
+
+        return "editquartier"; }
+
+
+
+    public void updateQuartier(@PathVariable("id")int id,
+                               @PathVariable("typeQuartier")String typeQuartier,
+                               @Valid Quartier quartier, BindingResult result, Model model) {
+        quartier.setTypeQuartier(typeQuartier);
+
+        quartierRepository.save(quartier);
+
+    }
+
+
 }
 
 

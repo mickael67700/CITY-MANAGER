@@ -141,11 +141,21 @@ public class Quartier  implements Serializable {
         this.abscisse = abscisse;
         this.ordonnee = ordonnee;
     }
-    @Override
-    public String toString() {
-        return typeQuartier;
+    public Quartier(String typeQuartier){
+        this.typeQuartier = typeQuartier;
     }
 
+    @Override
+    public String toString() {
+        return "Quartier{" +
+                "id=" + id +
+                ", ville=" + ville +
+                ", typeQuartier='" + typeQuartier + '\'' +
+                ", valeur=" + valeur +
+                ", abscisse=" + abscisse +
+                ", ordonnee=" + ordonnee +
+                '}';
+    }
 }
 
 
